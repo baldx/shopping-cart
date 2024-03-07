@@ -33,9 +33,17 @@ li:hover {
 }
 
 img {
-    object-fit: cover;
+    object-fit: contain;
 }
 
 ::placeholder {
     font-style: italic;
+}
+
+main {
+    height: 85vh;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
