@@ -8,16 +8,16 @@ export default function Header () {
             <header>
                 <div className="left-header">
                     <img src="./src/assets/cart-logo.png" />
-                    <h1>Cartify</h1>
+                    <h1>Cartlify</h1>
                 </div>
 
                     <ul className="right-header">
                         <li><a href="#">About us</a></li>
                         <li><input type="text" name="search" id="search" placeholder="Search here..." value={search} onChange={event => setSearch(event.target.value)} /></li>
                         <li>
-                            <a href="#">
-                                <span className="material-symbols-outlined">shopping_cart</span>
-                                Cart 
+                            <a href="#" className="cart-container">
+                                Cart
+                                <img src="./src/assets/cart.png" className="cart" />
                             </a>
                         </li>
                     </ul>
