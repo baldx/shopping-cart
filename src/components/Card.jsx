@@ -1,13 +1,14 @@
 import { Link } from "react-router-dom";
 
-function Card () {
+// eslint-disable-next-line react/prop-types
+function Card ({ image }) {//FIX PROPTYPES WITH IMAGE
     return (
         <>
             <div className="card">
             <Link to="#" className="purchase-btn-link">
                 <button className="purchase-btn">Purchase</button>
             </Link>
-            <img src="./src/assets/homepage-bg-img.jpg" className="card-img" />
+            <img src={image} className="card-img" />
             </div>
         </>
     )
