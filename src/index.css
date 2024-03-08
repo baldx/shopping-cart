@@ -1,5 +1,6 @@
 body {
     margin: 0px;
+    overflow-x: hidden;
 }
 
 * {
@@ -38,12 +39,4 @@ img {
 
 ::placeholder {
     font-style: italic;
-}
-
-main {
-    height: auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: end;
 }
