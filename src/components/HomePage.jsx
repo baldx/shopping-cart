@@ -1,11 +1,13 @@
+import { Link } from 'react-router-dom';
+
 function HomePage () {
 
     return (
         <>
             <img src="./src/assets/homepage-bg-img.jpg" className="head-image" />
-            <a href="#" className="shop-btn">
+            <Link to="shopping" className="shop-btn">
                 <button>Shop now</button>
-            </a>
+            </Link>
         </>
     )
 }
