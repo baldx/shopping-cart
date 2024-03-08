@@ -17,6 +17,7 @@
 .right-header {
   font-size: 2em;
   width: auto;
+  margin-right: 1em;
 }
 
 .left-header img {
@@ -39,6 +40,26 @@
 }
 
 .head-image {
-  height: 50vh;
-  border: 1px solid red;
+  object-fit: cover;
+  height: 85vh;
+  width: 100vw;
+}
+
+.shop-btn {
+  position: absolute;
+  margin-bottom: 64px;
+}
+
+.shop-btn button {
+  padding: 8px;
+  font-size: 2em;
+  border: none;
+  border-radius: 5px;
+  background: white;
+  transition: 200ms ease-in-out;
+  cursor: pointer;
+}
+
+.shop-btn button:hover {
+  transform: scale(1.1);
 }
