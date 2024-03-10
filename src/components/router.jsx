@@ -14,7 +14,7 @@ const Router = () => {
             element: <ShoppingPage />,
         },
         { 
-            path: "shopping/purchase", 
+            path: "shopping/purchase/:index", 
             element: <PurchaseScreen /> 
         },
     ])
