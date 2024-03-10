@@ -6,8 +6,8 @@ function Card ({ image, index }) {//FIX PROPTYPES WITH IMAGE & onClick
     return (
         <>
             <div className="card">
-            <Link to="purchase" className="purchase-btn-link">
-                <button className="purchase-btn">Purchase</button>
+            <Link to={`/shopping/purchase/${index}`} className="purchase-btn-link">
+                <button className="purchase-btn" data-index={index}>Purchase</button>
             </Link>
             <img src={image} className="card-img"  alt={`Product ${index}`} />
             </div>
