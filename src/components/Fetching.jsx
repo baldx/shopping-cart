@@ -5,6 +5,7 @@ export default function useImageURL()  {
     const [images, setImages] = useState([]);
     const [error, setError] = useState(null); 
     const [loading, setLoading] = useState(true);
+    const [data, setData] = useState('');
 
     useEffect(() => {
         let mounted = true;
@@ -18,6 +19,7 @@ export default function useImageURL()  {
                 if (mounted) {
                     const imageURLs = json.map(product => product.image);
                     setImages(prevImages => [...prevImages, ...imageURLs]);
+                    setData(json)
                 }
             })
             .catch(error => {
@@ -32,5 +34,5 @@ export default function useImageURL()  {
         };
     }, []);
 
-    return { images, error, loading };
+    return { images, error, loading, data };
 }
