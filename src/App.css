@@ -142,7 +142,6 @@
 .product-actions {
   width: 50%;
   display: flex;
-  gap: 5em;
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -161,7 +160,7 @@
   text-align: center;
  }
 
- .price {
+ .price, .product-title {
   font-size: 2em;
  }
 
