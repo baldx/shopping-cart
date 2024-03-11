@@ -15,7 +15,7 @@ export default function Header ({ goBack }) { //ADD PROP HERE LATER
     function GoBack() {
         return (
             <>
-                <li><Link to="shopping">Shopping</Link></li>
+                <li><a href="#">Shopping</a></li>
             </>
         )
     }
