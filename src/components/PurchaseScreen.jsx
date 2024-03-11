@@ -37,6 +37,7 @@ function PurchaseScreen () {
 
                 <div className="product-actions">
                     <div className="top">
+                        <p className="product-title">{product.title}</p>
                         <p className="description">{product.description}</p>
                         <p className="price">{Math.round(product.price * amount)}$</p>
                     </div>
