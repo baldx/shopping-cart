@@ -15,7 +15,7 @@ export default function Header ({ goBack }) { //ADD PROP HERE LATER
     function GoBack() {
         return (
             <>
-                <li><a href="#">Shopping</a></li>
+                <li><Link to="../shopping">Shopping</Link></li>
             </>
         )
     }
@@ -32,10 +32,10 @@ export default function Header ({ goBack }) { //ADD PROP HERE LATER
                         {goBack ? GoBack() : AboutMe()}
                         <li><input type="text" name="search" id="search" placeholder="Search here..." value={search} onChange={event => setSearch(event.target.value)} /></li>
                         <li>
-                            <a href="#" className="cart-container">
+                            <Link to="../cart" className="cart-container">
                                 Cart
                                 <img src="./src/assets/cart.png" className="cart" />
-                            </a>
+                            </Link>
                         </li>
                     </ul>
             </header>
