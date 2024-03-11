@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import useImageURL from "./Fetching";
 import { useParams } from "react-router-dom";
+import Header from "./Header";
 
 // eslint-disable-next-line react/prop-types
 function PurchaseScreen () {
@@ -30,15 +31,25 @@ function PurchaseScreen () {
 
     return (
         <>
-            <div className="img-info">
+            <Header goBack={true}/>
+            <main className="purchase-main">
                 <img src={product.image} className="purchase-card-img" />
-                <p>{product.description}</p>
-                <p>{Math.round(product.price * amount)}$</p>
-            </div>
 
-            <button className="increase" onClick={increaseProducts}>+</button>
-            <div className="amount">{amount}</div>
-            <button className="decrease" onClick={decreaseProducts}>-</button>
+                <div className="product-actions">
+                    <div className="top">
+                        <p className="description">{product.description}</p>
+                        <p className="price">{Math.round(product.price * amount)}$</p>
+                    </div>
+
+                    <div className="bottom">
+                        <button className="increase" onClick={increaseProducts}>+</button>
+                        <div className="amount">{amount}</div>
+                        <button className="decrease" onClick={decreaseProducts}>-</button>
+                        <button className="purchase">Purchase</button>
+                    </div>
+
+                </div>
+            </main>
         </>
     )
 
