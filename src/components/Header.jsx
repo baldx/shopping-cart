@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
+// eslint-disable-next-line react/prop-types
 export default function Header ({ goBack }) { //ADD PROP HERE LATER
     const [search, setSearch] = useState('');
 
