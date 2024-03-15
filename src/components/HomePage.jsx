@@ -1,13 +1,15 @@
 import { Link } from 'react-router-dom';
 
-function HomePage () {
+function HomePage ({ onClick }) {
 
     return (
         <>
+        <main className="homepage-main">
             <img src="./src/assets/homepage-bg-img.jpg" className="head-image" />
             <Link to="shopping" className="shop-btn">
-                <button>Shop now</button>
+                <button onClick={onClick}>Shop now</button>
             </Link>
+        </main>
         </>
     )
 }

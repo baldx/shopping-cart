@@ -3,8 +3,9 @@ import useImageURL from "./Fetching";
 import { useParams } from "react-router-dom";
 import Header from "./Header";
 
+
 // eslint-disable-next-line react/prop-types
-function PurchaseScreen () {
+function PurchaseScreen ({ addToCart }) {
     const { data, loading, error } = useImageURL();
     const { index } = useParams();
     const [product, setProduct] = useState(null);
@@ -14,7 +15,7 @@ function PurchaseScreen () {
         if (data && data[index]) {
             setProduct(data[index]);
         }
-    }, [data, index]);
+    }, [data, index]); //try moving useEffect to app.jsx, to parent component and see if it works. use useState to link between the 2 components
 
 
     const increaseProducts = () => {
@@ -28,6 +29,12 @@ function PurchaseScreen () {
     if (loading) return <p>Loading...</p>;
     if (error) return <p>Error: {error.message}</p>;
     if (!product) return null;
+
+    const handlePurchase = () => {
+        addToCart = [product, amount]
+        console.log(addToCart, "purchaseScreen.jsx");
+        return addToCart
+    }
 
     return (
         <>
@@ -46,9 +53,8 @@ function PurchaseScreen () {
                         <button className="increase" onClick={increaseProducts}>+</button>
                         <div className="amount">{amount}</div>
                         <button className="decrease" onClick={decreaseProducts}>-</button>
-                        <button className="purchase">Purchase</button>
+                        <button className="purchase" onClick={handlePurchase}>Purchase</button>
                     </div>
-
                 </div>
             </main>
         </>
@@ -58,10 +64,3 @@ function PurchaseScreen () {
 }
 
 export default PurchaseScreen;
-
-/*
-    Pseudocode to make the purchase screen:
-
-    * Onclick get the data of which product. (Maybe through index in the array)
-    *
-*/
