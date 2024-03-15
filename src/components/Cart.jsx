@@ -1,6 +1,7 @@
-import Header from "./Header";
+import PropTypes from 'prop-types';
 
-export default function Cart () {
+export default function Cart ({ cartItems }) {
+
 
     //fix hovering
     //link data coming from PurchaseScreen.jsx to here
@@ -9,21 +10,22 @@ export default function Cart () {
     //for ever purchase increase the number of cart
     // finish project :)
 
+    const logStuff = () => {
+        console.log(cartItems + "cart.jsx");
+    }
+
     return (
-        <>
-            <Header goBack={true}/>
-            
+        <>            
 
             <main className="main-cart">
                 <ul>
-                    <li>
-                        <img src={""} />
-                        <div className="cart-title">{"title"}</div>
-                        <div className="cart-price">{"price"}</div>
-                        <div className="cart-amount">{"amount"}</div>
-                    </li>
+                    <button onClick={logStuff}>dsad</button>
                 </ul>
             </main>
         </>
     )
 }
+
+Cart.propTypes = {
+    cartItems: PropTypes.array
+};
