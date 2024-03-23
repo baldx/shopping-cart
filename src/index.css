@@ -29,7 +29,7 @@ a {
     color: black;
 }
 
-li:hover {
+header li:hover {
     transform: scale(1.1);
 }
 
