@@ -1,9 +1,11 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { Link } from "react-router-dom";
+import { Shop } from "./router";
 
 // eslint-disable-next-line react/prop-types
 export default function Header ({ goBack }) { //ADD PROP HERE LATER
     const [search, setSearch] = useState('');
+    const { cartItems } = useContext(Shop);
 
     function AboutMe () {
         return (
@@ -20,6 +22,7 @@ export default function Header ({ goBack }) { //ADD PROP HERE LATER
             </>
         )
     }
+    
 
     return (
         <>
@@ -34,7 +37,7 @@ export default function Header ({ goBack }) { //ADD PROP HERE LATER
                         <li><input type="text" name="search" id="search" placeholder="Search here..." value={search} onChange={event => setSearch(event.target.value)} /></li>
                         <li>
                             <Link to="../cart" className="cart-container">
-                                Cart
+                                Cart {cartItems.length}
                                 <img src="./src/assets/cart.png" className="cart" />
                             </Link>
                         </li>
