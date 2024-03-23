@@ -201,7 +201,6 @@
   object-fit: contain;
   height: 100px;
   width: 200px;
-  border: 1px solid red;
  }
 
  .main-cart {
@@ -216,10 +215,10 @@
   justify-content: space-between;
   align-items: center;
   border-radius: 5px;
-  border: 1px solid green;
   margin-bottom: 2em;
   padding-left: 2em;
   padding-right: 2em;
+  box-shadow: -26px 3px 50px -3px rgba(0,0,0,0.1);
  }
 
  .item-info-text {
@@ -244,6 +243,7 @@
  a[href="/development"] {
   display: flex;
   margin-top: 2em;
+  margin-bottom: 2em;
   justify-content: center;
   text-decoration: none;
   cursor: pointer;
@@ -252,4 +252,14 @@
  .development-message {
   text-align: center;
   font-size: 2em;
+ }
+
+ .top-text {
+  font-size: 1.3em;
+  text-align: center;
+ }
+
+ .bottom-text {
+  font-size: 1.2em;
+  text-align: center;
  }
