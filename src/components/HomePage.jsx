@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
 
 function HomePage ({ onClick }) {
 
@@ -15,3 +16,7 @@ function HomePage ({ onClick }) {
 }
 
 export default HomePage;
+
+HomePage.propTypes = {
+    onClick: PropTypes.func
+}
