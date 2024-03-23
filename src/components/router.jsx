@@ -6,6 +6,7 @@ import Cart from "./Cart";
 import { useState } from "react";
 import useImageURL from "./Fetching";
 import { createContext } from "react";
+import Development from "./Development";
 
 export const Shop = createContext({});
   
@@ -13,9 +14,9 @@ const Router = () => {
     const [cartItems, setCartItems] = useState([]);
     const { data } = useImageURL();
     const [product, setProduct] = useState([]);
+    const [showShop, setShowShop] = useState(false);
     
     const addToCart = (product, amount) => {
-        console.log(product, amount, "adding to cart");
         setCartItems([...cartItems, { product, amount }]);
     }
     
@@ -34,12 +35,16 @@ const Router = () => {
         },
         {
             path: "/cart",
-            element: <Cart />
+            element: <Cart cartItems={cartItems}/>
+        },
+        {
+            path: "/development",
+            element: <Development />
         }
     ])
 
     return (
-    <Shop.Provider value={{cartItems, product, setProduct, addToCart}}>
+    <Shop.Provider value={{cartItems, product, setProduct, addToCart, showShop, setShowShop}}>
         <RouterProvider router={router} />
     </Shop.Provider>
     
