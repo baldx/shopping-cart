@@ -64,7 +64,7 @@
   cursor: pointer;
 }
 
-.shop-btn button:hover {
+.shop-btn button:hover, .checkout:hover {
   transform: scale(1.1);
 }
 
@@ -113,7 +113,7 @@
   justify-content: center;
 }
 
-.purchase-btn {
+.purchase-btn, .checkout {
   padding: 8px;
   font-size: 1em;
   border: none;
@@ -195,4 +195,61 @@
 
  .purchase:active, .increase:active, .decrease:active {
   background-color:rgb(190, 180, 180);
+ }
+
+ .cart-img {
+  object-fit: contain;
+  height: 100px;
+  width: 200px;
+  border: 1px solid red;
+ }
+
+ .main-cart {
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  
+ }
+
+ .item-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 5px;
+  border: 1px solid green;
+  margin-bottom: 2em;
+  padding-left: 2em;
+  padding-right: 2em;
+ }
+
+ .item-info-text {
+  display: grid;
+  grid-template-columns: 3fr 1fr 1fr;
+  justify-content: space-between;
+  font-size: 1.5em;
+  width: 100%;
+ }
+
+ .item-info-text-child {
+  margin-left: 1em;
+  text-align: center;
+ }
+
+ .checkout {
+  transition: 150ms ease-in;
+  width: 60%;
+  justify-items: center;
+ }
+
+ a[href="/development"] {
+  display: flex;
+  margin-top: 2em;
+  justify-content: center;
+  text-decoration: none;
+  cursor: pointer;
+ }
+
+ .development-message {
+  text-align: center;
+  font-size: 2em;
  }
