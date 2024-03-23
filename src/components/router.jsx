@@ -30,7 +30,7 @@ const Router = () => {
         },
         { 
             path: "/shopping/purchase/:index", 
-            element: <PurchaseScreen  data={data}/> 
+            element: <PurchaseScreen  data={data} addToCart={addToCart}/> 
         },
         {
             path: "/cart",
