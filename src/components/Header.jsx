@@ -1,11 +1,11 @@
-import { useContext, useState } from "react";
+import { useContext } from "react";
 import { Link } from "react-router-dom";
 import { Shop } from "./router";
+import PropTypes from 'prop-types';
 
-// eslint-disable-next-line react/prop-types
-export default function Header ({ goBack }) { //ADD PROP HERE LATER
-    const [search, setSearch] = useState('');
-    const { cartItems } = useContext(Shop);
+
+export default function Header ({ goBack }) { 
+    const { cartItems, setShowShop } = useContext(Shop);
 
     function AboutMe () {
         return (
@@ -22,7 +22,6 @@ export default function Header ({ goBack }) { //ADD PROP HERE LATER
             </>
         )
     }
-    
 
     return (
         <>
@@ -34,9 +33,8 @@ export default function Header ({ goBack }) { //ADD PROP HERE LATER
 
                     <ul className="right-header">
                         {goBack ? GoBack() : AboutMe()}
-                        <li><input type="text" name="search" id="search" placeholder="Search here..." value={search} onChange={event => setSearch(event.target.value)} /></li>
                         <li>
-                            <Link to="../cart" className="cart-container">
+                            <Link to="../cart" onClick={() => setShowShop(true)} className="cart-container">
                                 Cart {cartItems.length}
                                 <img src="./src/assets/cart.png" className="cart" />
                             </Link>
@@ -47,4 +45,8 @@ export default function Header ({ goBack }) { //ADD PROP HERE LATER
 
         </>
     )
+}
+
+Header.propTypes = {
+    goBack: PropTypes.bool
 }
