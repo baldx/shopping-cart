@@ -1,7 +1,8 @@
 import { Link } from "react-router-dom";
+import PropTypes from 'prop-types';
 
-// eslint-disable-next-line react/prop-types
-function Card ({ image, index }) {//FIX PROPTYPES WITH IMAGE & onClick
+
+function Card ({ image, index }) {
 
     return (
         <>
@@ -16,3 +17,8 @@ function Card ({ image, index }) {//FIX PROPTYPES WITH IMAGE & onClick
 }
 
 export default Card;
+
+Card.propTypes = {
+    image: PropTypes.string,
+    index: PropTypes.number
+}
