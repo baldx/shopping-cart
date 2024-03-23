@@ -62,5 +62,6 @@ function PurchaseScreen ({ addToCart, data }) {
 export default PurchaseScreen;
 
 PurchaseScreen.propTypes = {
-    product: PropTypes.array
+    product: PropTypes.array,
+    addToCart: PropTypes.func
 }
