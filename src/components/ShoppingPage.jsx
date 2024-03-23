@@ -1,6 +1,5 @@
 import Header from "./Header";
 import useImageURL from "./Fetching";
-import PropTypes from 'prop-types';
 import Card from "./Card";
 
 function ShoppingPage () {
@@ -30,7 +29,3 @@ function ShoppingPage () {
 }
 
 export default ShoppingPage;
-
-ShoppingPage.propTypes = {
-    createCards: PropTypes.array
-}
