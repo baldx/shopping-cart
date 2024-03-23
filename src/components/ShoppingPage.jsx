@@ -1,12 +1,13 @@
 import Header from "./Header";
-import Card from "./Card";
 import useImageURL from "./Fetching";
+import PropTypes from 'prop-types';
+import Card from "./Card";
 
 function ShoppingPage () {
 
     const { images, error, loading } = useImageURL();
 
-    if (error) return <p>A network error was encountered</p> //CHANGE IT LATER
+    if (error) return <p>A network error was encountered, {error}</p> //CHANGE IT LATER
     if (loading) return <p>Loading...</p> //CHANGE IT LATER
 
     function createCards () {
@@ -29,3 +30,7 @@ function ShoppingPage () {
 }
 
 export default ShoppingPage;
+
+ShoppingPage.propTypes = {
+    createCards: PropTypes.array
+}
