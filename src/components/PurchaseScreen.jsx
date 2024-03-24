@@ -6,7 +6,6 @@ import { Shop } from "./router";
 import useImageURL from "./Fetching";
 
 
-
 // eslint-disable-next-line react/prop-types
 function PurchaseScreen ({ addToCart, data }) {
     const [amount, setAmount] = useState(1);
@@ -43,7 +42,7 @@ function PurchaseScreen ({ addToCart, data }) {
                     <div className="top">
                         <p className="product-title">{product.title}</p>
                         <p className="description">{product.description}</p>
-                        <p className="price">{Math.round(product.price * amount)}$</p>
+                        <p className="price">${Math.round(product.price * amount)}</p>
                     </div>
 
                     <div className="bottom">
