@@ -20,7 +20,7 @@ export default function Cart ({ cartItems }) {
             return (
                 <>
                     <Header goBack={showShop}/>
-                    Place your first order!
+                    <p className="warning-order">Place your first order <Link to="/shopping">here</Link>!</p>
                 </>
             )
         } else return (
