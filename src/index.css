@@ -1,10 +1,18 @@
 body {
     margin: 0px;
     overflow-x: hidden;
+    background: white;
 }
 
 * {
     box-sizing: border-box;
+}
+
+:root {
+    --white: #F5F5F5;
+    --milk: #F2EAD3;
+    --beige: #DFD7BF;
+    --brown: #3F2305;
 }
 
 header {
@@ -14,6 +22,8 @@ header {
     padding: 16px;
     height: 15vh;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    background: var(--milk);
+    color: var(--brown);
 }
 
 
@@ -29,8 +39,12 @@ a {
     color: black;
 }
 
-header li:hover {
+header li:hover, header a h1:hover {
     transform: scale(1.1);
+}
+
+header a h1 {
+    transition: 200ms ease-in-out;
 }
 
 img {
@@ -46,4 +60,11 @@ footer {
     flex-direction: column;
     align-items: center;
     justify-content: start;
+    background: var(--white);
+    box-shadow: rgba(50, 50, 93, 0.15) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+    
+}
+
+main {
+    background: white;
 }
